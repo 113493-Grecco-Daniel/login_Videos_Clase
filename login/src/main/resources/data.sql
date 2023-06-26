@@ -47,50 +47,50 @@ INSERT INTO matches_rps (id, number_of_plays, remainder_plays, player1score, pla
 
 INSERT INTO matches_rps(id, number_of_plays, remainder_plays, player1score, player2score)
     VALUES (1000002, 10, 5, 3, 2);
--- --
--- -- plays_rps
--- --partida 1 id1000000 va ganando 2222 3 a 2 -- aca deja de insertar datos, no hacepta ver si es por el match_rps_id
--- INSERT INTO plays_rps (id, match_rps,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000000, 1000000 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
--- INSERT INTO plays_rps (id, match_rps,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000001, 1000000 ,'PAPER', 'ROCK', 2222);
--- INSERT INTO plays_rps (id, match_rps,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000002, 1000000 ,'PAPER', 'ROCK',  2222);
--- INSERT INTO plays_rps (id, match_rps,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000003, 1000000 ,'ROCK', 'SCISSORS',  2222);
--- INSERT INTO plays_rps (id, match_rps,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000004, 1000000 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
 --
--- --partida 2 id10000001  gano 2222 6 a 4
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000000, 1000001 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000001, 1000001 ,'PAPER', 'ROCK',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000002, 1000001 ,'PAPER', 'ROCK',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000003, 1000001 ,'ROCK', 'SCISSORS', 2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000004, 1000001 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000005, 1000001 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000006, 1000001 ,'PAPER', 'ROCK',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000007, 1000001 ,'PAPER', 'ROCK',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000008, 1000001 ,'ROCK', 'SCISSORS',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000009, 1000001 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
---
--- --partida 3 id1000002 va ganando pero esta cancelada 2222 3 a 2
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000000, 1000002 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000001, 1000002 ,'PAPER', 'ROCK',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000002, 1000002 ,'PAPER', 'ROCK', 2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000003, 1000002 ,'ROCK', 'SCISSORS',  2222);
--- INSERT INTO plays_rps (id, match_rps_id,shape_hand_player1,shape_hand_player2 , winner_id )
--- VALUES (1000004, 1000002 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
+-- plays_rps
+--partida 1 id1000000 va ganando 2222 3 a 2 -- aca deja de insertar datos, no hacepta ver si es por el match_rps_id
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id  )
+VALUES (1000000, 1000000 ,'ROCK', 'PAPER',  1111);  -- porque la compu es 1111, el usa 10000000
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000001, 1000000 ,'PAPER', 'ROCK', 2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000002, 1000000 ,'PAPER', 'ROCK',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000003, 1000000 ,'ROCK', 'SCISSORS',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000004, 1000000 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
+
+--partida 2 id10000001  gano 2222 6 a 4
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000005, 1000001 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000006, 1000001 ,'PAPER', 'ROCK',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000007, 1000001 ,'PAPER', 'ROCK',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000008, 1000001 ,'ROCK', 'SCISSORS', 2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000009, 1000001 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000010, 1000001 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000011, 1000001 ,'PAPER', 'ROCK',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000012, 1000001 ,'PAPER', 'ROCK',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000013, 1000001 ,'ROCK', 'SCISSORS',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000014, 1000001 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
+
+--partida 3 id1000002 va ganando pero esta cancelada 2222 3 a 2
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id)
+VALUES (1000015, 1000002 ,'ROCK', 'PAPER',  1111); -- porque la compu es 1111, el usa 10000000
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000016, 1000002 ,'PAPER', 'ROCK',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000017, 1000002 ,'PAPER', 'ROCK', 2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000018, 1000002 ,'ROCK', 'SCISSORS',  2222);
+INSERT INTO plays_rps (id, match_rps_id, shape_hand_player1,shape_hand_player2 ,  winner_id )
+VALUES (1000019, 1000002 ,'PAPER', 'SCISSORS',  1111); -- porque la compu es 1111, el usa 10000000
