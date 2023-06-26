@@ -1,0 +1,69 @@
+@startuml
+class Player{
+    Long id
+    Strintg userName
+    String password
+    String email
+    String avatar
+    LocalDateTime lastLogin
+}
+
+class Game{
+    Long id
+    String code
+    String userName
+    String description
+    String rules
+}
+'tengo que declararla abstracta a match
+class  Match{
+Long id;
+Game game;
+Player player;
+LocalDateTime createDate;
+MatchStatus status;
+}
+
+class MatchRps{
+Integer numberOfPlays
+Integer remainderPlays
+Integer player1Score
+Integer player2Score
+List<PlayRps> plays
+ Long winnerId
+}
+
+class PlayRps{
+ Long id
+ Long matchRpsId
+ ShapeHand shapeHandPlayer1
+ ShapeHand shapeHandPlayer2
+ Long winnerId
+}
+
+enum ShapeHand{
+ ROCK
+ PAPER
+ SCISSORS
+}
+
+enum MatchStatus{
+    STARTED
+    FINISHED
+    CANCELED
+}
+
+
+
+'no me muestra como hacer las relaciones en el grafico
+
+ShapeHand --* PlayRps
+PlayRps --* MatchRps
+MatchRps --* Match
+MatchStatus  --* Match
+Game --*Match
+Player--* Match
+
+'la de matchRps a Match es la --* pero sin relleno la punta
+
+@enduml
