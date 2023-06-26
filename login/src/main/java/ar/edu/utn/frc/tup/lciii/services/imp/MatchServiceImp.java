@@ -6,6 +6,7 @@ import ar.edu.utn.frc.tup.lciii.models.Game;
 import ar.edu.utn.frc.tup.lciii.models.Match;
 import ar.edu.utn.frc.tup.lciii.models.MatchStatus;
 import ar.edu.utn.frc.tup.lciii.models.Player;
+import ar.edu.utn.frc.tup.lciii.repositories.jpa.MatchEntityFactory;
 import ar.edu.utn.frc.tup.lciii.repositories.jpa.MatchJpaRepository;
 import ar.edu.utn.frc.tup.lciii.services.GameService;
 import ar.edu.utn.frc.tup.lciii.services.MatchService;
@@ -41,8 +42,7 @@ public class MatchServiceImp implements MatchService {
         Optional<List<MatchEntity>> optionalMatchEntities = matchJpaRepository.getAllByPlayerId(PlayerId);
         if (optionalMatchEntities.isPresent()) {
         optionalMatchEntities.get().forEach(
-                me ->{ matches.add(modelMapper.map(me, MatchFactory.createMatch(me.getGame().getCode()).getClass())); }
-                // hacemos to-do esto de " MatchFactory.createMatch(me.getGame().getCode())".get class para que nos figa la clase del objeto al que hay que mapear
+                me ->{ matches.add(modelMapper.map(me, MatchFactory.getTypeOfMatch(me.getGame().getCode())));}
                 );
         }
         return matches;
@@ -53,12 +53,9 @@ public class MatchServiceImp implements MatchService {
 
        Player player= playerService.getPlayerById(matchDTO.getPlayerId());
        Game game= gameService.getGame(matchDTO.getGameId());
-        Match match= MatchFactory.createMatch(game.getCode());
-        match.setPlayer(player);
-        match.setGame(game);
-        match.setCreatedDate(LocalDateTime.now());
-        match.setStatus(MatchStatus.STARTED);
-        MatchEntity matchEntity = matchJpaRepository.save(modelMapper.map(match, MatchEntity.class));
+       Match match= MatchFactory.createMatch(player, game);
+
+       MatchEntity matchEntity = matchJpaRepository.save(modelMapper.map(match, MatchEntityFactory.getTypeOfMatch(match)));
 
         return modelMapper.map(matchEntity, match.getClass());
 
