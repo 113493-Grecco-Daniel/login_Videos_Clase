@@ -28,15 +28,15 @@ Values(1000000, 'RPS', 'Rock Paper Scissors',
        'resto de las reglas... '  );
 
 --
---matches
-INSERT INTO  matches(id, game_id, player_id, created_at, updated_at, status)
-VALUES (1000000, 1000000, 2222, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'STARTED');
+--matches0   ahora cambie lo del player 1 yplayer 2 ver si funciona
+INSERT INTO  matches(id, game_id, player1_id,  player2_id,created_at, updated_at, status)
+VALUES (1000000, 1000000, 2222,1111 , CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'STARTED');
 
-INSERT INTO  matches (id, game_id, player_id, created_at, updated_at, status)
-VALUES (1000001, 1000000, 2222, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'FINISHED');
+INSERT INTO  matches (id, game_id,  player1_id,  player2_id, created_at, updated_at, status)
+VALUES (1000001, 1000000, 2222, 1111,CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'FINISHED');
 
-INSERT INTO  matches (id, game_id, player_id, created_at, updated_at, status)
-VALUES (1000002, 1000000, 2222, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'CANCELED');
+INSERT INTO  matches (id, game_id,  player1_id,  player2_id, created_at, updated_at, status)
+VALUES (1000002, 1000000, 2222, 3333,CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'CANCELED');
 --
 --matches_rps
 INSERT INTO  matches_rps(id, number_of_plays, remainder_plays, player1score, player2score)

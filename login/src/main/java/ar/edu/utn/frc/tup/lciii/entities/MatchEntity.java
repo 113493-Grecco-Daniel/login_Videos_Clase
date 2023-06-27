@@ -24,9 +24,13 @@ public class MatchEntity {
     @ManyToOne
     private GameEntity game;
 
-    @JoinColumn(name="player_id")
+    @JoinColumn(name="player1_id") //modifique player 1 y 2 por cambios en la base - video 33
     @ManyToOne
-    private PlayerEntity player;
+    private PlayerEntity player1;
+
+    @JoinColumn(name="player2_id")
+    @ManyToOne
+    private PlayerEntity player2;
 
     @Column
     private LocalDateTime createdAt;

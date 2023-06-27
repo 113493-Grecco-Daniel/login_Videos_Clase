@@ -16,7 +16,7 @@ class Game{
     String rules
 }
 'tengo que declararla abstracta a match
-class  Match{
+abstract class  Match{
 Long id;
 Game game;
 Player player;
@@ -31,6 +31,10 @@ Integer player1Score
 Integer player2Score
 List<PlayRps> plays
  Long winnerId
+}
+
+interface Play{
+
 }
 
 class PlayRps{
@@ -53,17 +57,17 @@ enum MatchStatus{
     CANCELED
 }
 
+'no me muestra que lleva la clase play
 
 
-'no me muestra como hacer las relaciones en el grafico
-
-ShapeHand --* PlayRps
-PlayRps --* MatchRps
-MatchRps --* Match
-MatchStatus  --* Match
+MatchStatus --*Match
 Game --*Match
 Player--* Match
+Match <|--MatchRps
+MatchRps*--PlayRps
+PlayRps *-l-ShapeHand
+PlayRps -r-|> Play
 
-'la de matchRps a Match es la --* pero sin relleno la punta
+
 
 @enduml

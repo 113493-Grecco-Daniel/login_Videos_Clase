@@ -12,7 +12,8 @@ import java.util.Optional;
 
 @Repository
 public interface MatchJpaRepository  extends JpaRepository<MatchEntity, Long> {
-    @Query("SELECT m FROM MatchEntity  m Where m.player.id = :playerId")
+ //   @Query("SELECT m FROM MatchEntity  m Where m.player.id = :playerId")
     Optional<List<MatchEntity>> getAllByPlayerId(Long playerId);
 
+    MatchEntity getMatchById(Long id); // lo creo para saltear que en vez de usar el hibernet proxy devuelva el objeto real
 }

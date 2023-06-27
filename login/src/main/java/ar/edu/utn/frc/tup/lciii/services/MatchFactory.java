@@ -6,9 +6,11 @@ import ar.edu.utn.frc.tup.lciii.models.MatchStatus;
 import ar.edu.utn.frc.tup.lciii.models.Player;
 import ar.edu.utn.frc.tup.lciii.models.rps.MatchRps;
 import ar.edu.utn.frc.tup.lciii.models.rps.PlayRps;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
 
 public class MatchFactory {
 
@@ -41,9 +43,10 @@ public class MatchFactory {
 
     return match;
     }
-    private static Match getBasicMatch(Player player, Game game){
+    private static Match getBasicMatch(Player player, Game game){ // ahora tendria que pasar 2 players
         Match match= getMatchInstance(game.getCode());
-        match.setPlayer(player);
+        match.setPlayer1(player); // este ya no existe, deberia proporcionar player 1 y player 2 aca y  donde sea
+
         match.setGame(game);
         match.setCreatedDate(LocalDateTime.now());
         match.setStatus(MatchStatus.STARTED);
